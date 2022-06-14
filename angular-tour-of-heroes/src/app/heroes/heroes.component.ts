@@ -12,7 +12,10 @@ import { Hero } from '../hero';
 
 // export allows component class to be imported somewhere else
 export class HeroesComponent implements OnInit {
-  hero = 'Windstorm';
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  };  
   constructor() { }
 
   // ngOnInit is a lifecycle hook-- good place for initialization logic
