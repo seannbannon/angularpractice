@@ -11,4 +11,9 @@
     </li>
 </ul>
 
+<!-- binds using hero-detail.component.ts selector (app-hero-detail) -->
+<!-- [hero]= "selectedHero" is an angular property bind, one way data binding from the selectedHero
+    property of the HeroesComponent, to the hero property of the target element-> this in turn maps 
+    to the hero property of HeroDetailComponent-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
 
