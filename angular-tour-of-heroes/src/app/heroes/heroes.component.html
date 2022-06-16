@@ -4,7 +4,7 @@
 <ul class="heroes">
     <li *ngFor="let hero of heroes">
         <!-- click is an example of event binding syntax -->
-        <button type="button" (click)="onSelect(hero)">
+        <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
             <span class="badge">{{hero.id}}</span> 
             <span class="name">{{hero.name}}</span>
         </button> 
