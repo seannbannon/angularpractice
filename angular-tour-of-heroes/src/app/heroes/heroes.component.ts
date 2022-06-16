@@ -15,11 +15,17 @@ import { HEROES } from '../mock-heroes';
 // export allows component class to be imported somewhere else
 export class HeroesComponent implements OnInit {
   heroes = HEROES;
+  selectedHero?: Hero;
 
   constructor() { }
 
   // ngOnInit is a lifecycle hook-- good place for initialization logic
   ngOnInit(): void {
+  }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+    console.log(this.selectedHero)
   }
 
 }
