@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import { HEROES } from '../mock-heroes';
 
 @Component({
   // components CSS element selector
@@ -10,12 +11,13 @@ import { Hero } from '../hero';
   styleUrls: ['./heroes.component.css']
 })
 
+
 // export allows component class to be imported somewhere else
 export class HeroesComponent implements OnInit {
   hero: Hero = {
     id: 1,
     name: 'Windstorm'
-  };  
+  };   
   constructor() { }
 
   // ngOnInit is a lifecycle hook-- good place for initialization logic
